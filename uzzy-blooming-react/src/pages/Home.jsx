@@ -25,7 +25,7 @@ export default function Home() {
                         <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/80">
                             Female & Kids Fashion
                         </p>
-                        <h1 className="text-white font-black leading-tight sm:text-5xl lg:text-6xl">
+                        <h1 className="text-white font-black leading-tight text-3xl sm:text-5xl lg:text-6xl">
                             Elevate Your Style with <span className="text-accent underline decoration-accent/30 underline-offset-8">UzzyBlooming</span>
                         </h1>
                         <p className="text-sm font-light leading-relaxed text-white/90 sm:text-lg">

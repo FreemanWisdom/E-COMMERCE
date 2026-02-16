@@ -25,13 +25,15 @@ export default function Navbar() {
         </Link>
 
         <button
-          className="rounded-md p-2 text-primary lg:hidden"
+          className="relative z-50 flex h-10 w-10 flex-col items-center justify-center rounded-full bg-primary/5 text-primary transition-colors hover:bg-primary/10 lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label="Toggle menu"
         >
-          <span className="block h-0.5 w-5 bg-primary" />
-          <span className="mt-1 block h-0.5 w-5 bg-primary" />
-          <span className="mt-1 block h-0.5 w-5 bg-primary" />
+          <div className="relative h-4 w-5">
+            <span className={`absolute left-0 block h-0.5 w-5 bg-current transition-all duration-300 ${open ? 'top-2 rotate-45' : 'top-0'}`} />
+            <span className={`absolute left-0 top-2 block h-0.5 w-5 bg-current transition-all duration-300 ${open ? 'opacity-0' : 'opacity-100'}`} />
+            <span className={`absolute left-0 block h-0.5 w-5 bg-current transition-all duration-300 ${open ? 'top-2 -rotate-45' : 'top-4'}`} />
+          </div>
         </button>
 
         <ul className="hidden items-center gap-6 lg:flex">

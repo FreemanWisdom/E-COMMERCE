@@ -23,7 +23,7 @@ export default function HomePage() {
 
           <div className="relative z-10 max-w-xl space-y-5">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/80">Female & Kids Fashion</p>
-            <h1 className="font-[var(--font-heading)] text-5xl font-black tracking-tighter text-white sm:text-6xl lg:text-7xl">
+            <h1 className="font-[var(--font-heading)] text-3xl font-black tracking-tighter text-white sm:text-6xl lg:text-7xl">
               Elevate Your <span className="text-rose underline decoration-rose/30 underline-offset-8">Style</span> with UZZYBLOOMING
             </h1>
             <p className="max-w-lg text-sm font-light leading-7 text-white/90 sm:text-lg">
