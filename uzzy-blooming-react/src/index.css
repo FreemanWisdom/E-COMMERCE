@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f172a;
+  --color-accent: #d97706;
+  --color-neutral-light: #f8fafc;
+  --color-neutral-dark: #334155;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+}
+
+
+:root {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-light text-primary font-sans antialiased font-normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-black tracking-tighter text-primary;
+    /* Bold and authoritative execution */
+    line-height: 1.1;
+    opacity: 1;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-7xl mb-6;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl lg:text-5xl mb-4;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl lg:text-4xl mb-3;
+  }
+}
+
+@layer components {
+  .container-padded {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-12 sm:py-16;
+  }
+}
