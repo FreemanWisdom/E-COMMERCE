@@ -15,29 +15,34 @@ export default function HomePage() {
     <>
       <section className="container-padded section-space">
         <div
-          className="grid items-center gap-8 rounded-3xl bg-cover bg-center bg-no-repeat p-8 sm:p-12 lg:grid-cols-2"
+          className="relative grid min-h-[600px] items-center overflow-hidden rounded-3xl bg-cover bg-center bg-no-repeat p-8 sm:p-12"
           style={{ backgroundImage: 'url(/background-header.jpg)' }}
         >
-          <div className="space-y-5 rounded-2xl bg-white/90 p-6 backdrop-blur-sm sm:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary/70">Female & Kids Fashion</p>
-            <h1 className="font-[var(--font-heading)] text-4xl font-black tracking-tighter text-primary sm:text-5xl">
-              Elevate Your Style with UZZYBLOOMING
+          {/* Dark gradient overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+
+          <div className="relative z-10 max-w-xl space-y-5">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/80">Female & Kids Fashion</p>
+            <h1 className="font-[var(--font-heading)] text-5xl font-black tracking-tighter text-white sm:text-6xl lg:text-7xl">
+              Elevate Your <span className="text-rose underline decoration-rose/30 underline-offset-8">Style</span> with UZZYBLOOMING
             </h1>
-            <p className="max-w-lg text-sm font-light leading-7 text-primary/80">
+            <p className="max-w-lg text-sm font-light leading-7 text-white/90 sm:text-lg">
               Discover thoughtful fashion and lifestyle picks for women and kids, designed for elegance and
               everyday confidence.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4 pt-4">
               <Link href="/shop">
-                <Button>Shop Now</Button>
+                <Button className="px-10 py-6 text-base shadow-xl transition-all hover:scale-105 active:scale-95">
+                  Shop Now
+                </Button>
               </Link>
               <Link href="/about">
-                <Button variant="secondary">Our Story</Button>
+                <Button variant="secondary" className="border-white/20 bg-white/5 px-10 py-6 text-base text-white backdrop-blur-md hover:bg-white/10">
+                  Our Story
+                </Button>
               </Link>
             </div>
           </div>
-
-          <div className="hidden lg:block"></div> {/* Spacer for grid layout against background */}
         </div>
       </section>
 

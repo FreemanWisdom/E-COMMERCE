@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './Layout';
 import { CartProvider } from './context/CartContext';
 
@@ -31,7 +31,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <CartProvider>
-      <BrowserRouter>
+      <Router>
         <ScrollToTop />
         <Layout>
           <Suspense fallback={
@@ -55,7 +55,7 @@ export default function App() {
             </Routes>
           </Suspense>
         </Layout>
-      </BrowserRouter>
+      </Router>
     </CartProvider>
   );
 }

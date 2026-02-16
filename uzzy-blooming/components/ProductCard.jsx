@@ -24,8 +24,8 @@ export default function ProductCard({ product }) {
       </Link>
       <div className="mt-3 space-y-2">
         <Badge>{product.category.name}</Badge>
-        <h3 className="line-clamp-1 text-sm font-bold text-primary">{product.name}</h3>
-        <p className="text-sm font-semibold text-accent">{formatCurrency(product.price, product.currency)}</p>
+        <h3 className="line-clamp-1 text-sm font-black uppercase tracking-tight text-primary">{product.name}</h3>
+        <p className="text-sm font-medium text-accent">{formatCurrency(product.price, product.currency)}</p>
         <div className="flex gap-2">
           <Link
             href={`/product/${product.slug}`}

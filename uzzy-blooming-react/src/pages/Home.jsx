@@ -15,24 +15,33 @@ export default function Home() {
         <>
             <section className="container-padded pt-6 pb-12 sm:py-16">
                 <div
-                    className="grid min-h-[500px] items-center gap-8 rounded-3xl bg-cover bg-center bg-no-repeat p-6 sm:p-12 lg:grid-cols-2"
+                    className="relative grid min-h-[600px] items-center overflow-hidden rounded-3xl bg-cover bg-center bg-no-repeat p-6 sm:p-12"
                     style={{ backgroundImage: 'url(/background-header.jpg)' }}
                 >
-                    <div className="max-w-xl space-y-6 rounded-2xl bg-white/95 p-6 backdrop-blur-sm sm:p-10">
-                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary/60">Female & Kids Fashion</p>
-                        <h1 className="text-primary font-black">
-                            Elevate Your Style with <span className="text-accent">UzzyBlooming</span>
+                    {/* Dark gradient overlay for readability */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+                    <div className="relative z-10 max-w-xl space-y-6">
+                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/80">
+                            Female & Kids Fashion
+                        </p>
+                        <h1 className="text-white font-black leading-tight sm:text-5xl lg:text-6xl">
+                            Elevate Your Style with <span className="text-accent underline decoration-accent/30 underline-offset-8">UzzyBlooming</span>
                         </h1>
-                        <p className="text-sm font-light leading-relaxed text-primary/80 sm:text-base">
+                        <p className="text-sm font-light leading-relaxed text-white/90 sm:text-lg">
                             Discover thoughtful fashion and lifestyle picks for women and kids, designed for elegance and
                             everyday confidence.
                         </p>
-                        <div className="flex flex-wrap gap-4 pt-2">
+                        <div className="flex flex-wrap gap-4 pt-4">
                             <Link to="/shop">
-                                <Button className="px-8">Shop Now</Button>
+                                <Button className="px-10 py-6 text-base shadow-xl transition-all hover:scale-105 active:scale-95">
+                                    Shop Now
+                                </Button>
                             </Link>
                             <Link to="/about">
-                                <Button variant="secondary" className="px-8">Our Story</Button>
+                                <Button variant="secondary" className="border-white/30 bg-white/10 px-10 py-6 text-base text-white backdrop-blur-md hover:bg-white/20">
+                                    Our Story
+                                </Button>
                             </Link>
                         </div>
                     </div>
