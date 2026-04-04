@@ -10,8 +10,8 @@ export function CartProvider({ children }) {
   const [mounted, setMounted] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const openSidebar = () => setIsSidebarOpen(true);
-  const closeSidebar = () => setIsSidebarOpen(false);
+  const openCart = () => setIsSidebarOpen(true);
+  const closeCart = () => setIsSidebarOpen(false);
 
   useEffect(() => {
     try {
@@ -50,7 +50,6 @@ export function CartProvider({ children }) {
         ...current,
         {
           id: product.id,
-          slug: product.slug,
           name: product.name,
           price: product.price,
           image: product.image,
@@ -95,9 +94,11 @@ export function CartProvider({ children }) {
     clearCart,
     subtotal: totals.subtotal,
     totalItems: totals.totalItems,
-    isSidebarOpen,
-    openSidebar,
-    closeSidebar
+    isCartOpen: isSidebarOpen,
+    openCart,
+    closeCart,
+    openSidebar: openCart, // Compatibility
+    closeSidebar: closeCart // Compatibility
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

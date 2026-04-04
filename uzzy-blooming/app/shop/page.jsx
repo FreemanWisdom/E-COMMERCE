@@ -1,14 +1,13 @@
 import ShopPageClient from '../../components/shop/ShopPageClient';
-import { getCategories, getProducts } from '../../lib/products';
+import { products } from '../../lib/mockData/products';
 
 export const metadata = {
-  title: 'Shop',
+  title: 'Shop | Uzzyblooming Homes',
   description: 'Browse all products at UZZYBLOOMING HOMES.'
 };
 
 export default function ShopPage() {
-  const products = getProducts();
-  const categories = getCategories();
-
+  const categories = [...new Set(products.map(p => p.category))];
+  
   return <ShopPageClient products={products} categories={categories} />;
 }
