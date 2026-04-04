@@ -1,4 +1,4 @@
-import { Playfair_Display, Nunito_Sans } from 'next/font/google';
+import { Playfair_Display, Nunito } from 'next/font/google';
 import './globals.css';
 import Providers from './providers';
 import Navbar from '../components/Navbar';
@@ -6,12 +6,14 @@ import Footer from '../components/Footer';
 
 const heading = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-heading'
+  variable: '--font-heading',
+  display: 'swap',
 });
 
-const body = Nunito_Sans({
+const body = Nunito({
   subsets: ['latin'],
-  variable: '--font-body'
+  variable: '--font-body',
+  display: 'swap',
 });
 
 export const metadata = {
